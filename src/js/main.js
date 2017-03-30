@@ -7,6 +7,7 @@ $(document).ready(function () {
 		},
 		methods: {
 			search: function (queryTitle) {
+
 				let keyword = $('#keyword').val();
 				urlOmdbApi = `http://www.omdbapi.com/?s=${keyword}`;
 			},
