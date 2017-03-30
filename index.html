@@ -10,6 +10,7 @@
 	<link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="src/css/stylesheet.css">
 	<link rel="stylesheet" href="src/css/results.css">
+	<link rel="stylesheet" href="src/css/formulaire.css">
 
 </head>
 
@@ -25,176 +26,90 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- RESULTATS RECHERCHE -->
 	<div class="container">
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-	</div>
-	<!-- / RESULTATS RECHERCHE -->
 
+		<h2>Panaché Films</h2>
+
+
+		<div class="formulaire">
+			<form action="" method="POST" role="form">
+				<h3>Recherche un film </h3>
+
+
+				<div class="form-group">
+					<label for="mot-cles">Mot clés</label>
+					<input required type="text" class="form-control" id="mot-cles" placeholder="mot-cles">
+				</div>
+
+				<div class="form-group">
+					<p>Genre</p>
+					<input type="radio" name="name" id="film" value="film" class="film">
+					<label for="film">Films</label>
+
+					<input type="radio" name="name" id="serie" value="serie" class="serie">
+					<label for="serie">Series</label>
+
+
+					<input type="radio" name="name" id="episode" value="episode" class="episode">
+					<label for="episode">Épisodes</label>
+
+					<input type="text" name="otherGenre" style="display:none" class="form-control" id="otherGenre">
+				</div>
+
+				<div class="form-group">
+					<label for="region">Année du Film :</label><br />
+					<select class="form-control" id="annee-formulaire" name="annee-formulaire">
+                                <option value="default" selected>Choisissez une année</option>
+                     
+                            		</select>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Rechercher</button>
+
+			</form>
+		</div>
+		<!-- RESULTATS RECHERCHE -->
+		<!-- FICHE FILM -->
+		<div class="col-md-3 col-sm-4 movie-sheet">
+			<img class="img-responsive" src="img/movie-poster-example.jpg">
+			<h3 class="panel-title">The Last Unicorn</h3>
+			<span>1982 - Movie</span><br>
+			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
+		</div>
+		<!-- /FICHE FILM -->
+		<!-- FICHE FILM -->
+		<div class="col-md-3 col-sm-4 movie-sheet">
+			<img class="img-responsive" src="img/movie-poster-example.jpg">
+			<h3 class="panel-title">The Last Unicorn</h3>
+			<span>1982 - Movie</span><br>
+			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
+		</div>
+		<!-- /FICHE FILM -->
+		<!-- FICHE FILM -->
+		<div class="col-md-3 col-sm-4 movie-sheet">
+			<img class="img-responsive" src="img/movie-poster-example.jpg">
+			<h3 class="panel-title">The Last Unicorn</h3>
+			<span>1982 - Movie</span><br>
+			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
+		</div>
+		<!-- /FICHE FILM -->
+		<!-- FICHE FILM -->
+		<div class="col-md-3 col-sm-4 movie-sheet">
+			<img class="img-responsive" src="img/movie-poster-example.jpg">
+			<h3 class="panel-title">The Last Unicorn</h3>
+			<span>1982 - Movie</span><br>
+			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
+		</div>
+		<!-- /FICHE FILM -->
+		<!-- / RESULTATS RECHERCHE -->
+	</div>
 
 
 
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="src/js/main.js"></script>
+	<script src="src/js/formulaire.js"></script>
 </body>
 
 </html>
