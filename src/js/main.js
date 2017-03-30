@@ -8,7 +8,7 @@ $(document).ready(function () {
 		methods: {
 			search: function () {
 				$('.flush').empty();
-				let keyword = $('#keyword').val();
+				let keyword = $('#input-keyword').val();
 				let type = $('input[name]:checked').val();
 				let year = $('#year-form').val();
 				if (type === undefined) {
@@ -16,7 +16,6 @@ $(document).ready(function () {
 				} else {
 					urlOmdbApi = `http://www.omdbapi.com/?s=${keyword}&type=${type}&y=${year}`;
 				}
-				console.log(type);
 
 			},
 
@@ -29,6 +28,16 @@ $(document).ready(function () {
 					}
 					sURL = '';
 
+				});
+			},
+
+			saveKeywords: function () {
+				let savedKeyword = $('#input-keyword').val();
+				let url = 'http://localhost:3000/savedSearch'
+				console.log(savedKeyword);
+
+				$.post(url, { searchedKeyword: savedKeyword, queryURL: urlOmdbApi }).done(function () {
+					alert('Nouvelle citation ajoutée!');
 				});
 			}
 		}

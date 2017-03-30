@@ -1,0 +1,13 @@
+{
+  "savedSearch": [
+    {
+      "searchedKeyword": "Martini ",
+      "id": 1
+    },
+    {
+      "searchedKeyword": "Vodka ",
+      "queryURL": "http://www.omdbapi.com/?s=Vodka &y=default",
+      "id": 2
+    }
+  ]
+}

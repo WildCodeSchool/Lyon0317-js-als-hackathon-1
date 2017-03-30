@@ -37,20 +37,20 @@
 
 
 					<div class="form-group">
-						<label for="keyword">Mot clés</label>
-						<input required type="text" class="form-control" id="keyword" placeholder="mot-cles">
+						<label for="input-keyword">Mot clés</label>
+						<input required type="text" class="form-control" id="input-keyword" placeholder="mot-cles" v-on:keydown="search();showResults()">
 					</div>
 
 					<div class="form-group">
 						<p>Genre</p>
-						<input type="radio" name="radio-type" id="film" value="movie">
+						<input type="radio" name="radio-type" id="film" value="movie" v-on:click="search();showResults()">
 						<label for="film">Movies</label>
 
-						<input type="radio" name="radio-type" id="serie" value="series">
+						<input type="radio" name="radio-type" id="serie" value="series" v-on:click="search();showResults()">
 						<label for="serie">Series</label>
 
 
-						<input type="radio" name="radio-type" id="episode" value="episode">
+						<input type="radio" name="radio-type" id="episode" value="episode" v-on:click="search();showResults()">
 						<label for="episode">Episodes</label>
 
 						<input type="radio" name="radio-type" id="all" value="default">
@@ -65,7 +65,7 @@
 						</select>
 					</div>
 
-					<button type="button" v-on:click="search();showResults()" class="btn btn-primary">Rechercher</button>
+					<button type="button" v-on:click="search();showResults();saveKeywords()" class="btn btn-primary">Rechercher</button>
 
 				</form>
 			</div>
