@@ -2,21 +2,17 @@ $(document).ready(function () {
 
 	console.log('je suis méga ready');
 
-	let urlOmdbApi = 'http://www.omdbapi.com/?';
 
+	let urlOmdbApi = 'http://www.omdbapi.com/?s=unicorn';
 
-	// $('ul').empty();
-	$.getJSON(urlOmdbApi).done(function (Search) {
+	$.getJSON(urlOmdbApi).done(function (response) {
+		console.log(response);
 
-		for (let item of Search) {
-			console.log(item.title);
-			// $('ul').append(`<li>${item.content} ${item.note} /5</li>`);
+		for (let item in response.Search) {
+			console.log(response.Search[item]);
 		}
 
 
 	});
-
-
-
 
 });
