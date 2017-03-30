@@ -37,8 +37,8 @@
 
 
 					<div class="form-group">
-						<label for="mot-cles">Mot clés</label>
-						<input required type="text" class="form-control" id="mot-cles" placeholder="mot-cles">
+						<label for="keyword">Mot clés</label>
+						<input required type="text" class="form-control" id="keyword" placeholder="mot-cles">
 					</div>
 
 					<div class="form-group">
@@ -64,7 +64,7 @@
                             		</select>
 					</div>
 
-					<button type="button" class="btn btn-primary">Rechercher</button>
+					<button type="button" v-on:click="search();showResults()" class="btn btn-primary">Rechercher</button>
 
 				</form>
 			</div>
@@ -74,7 +74,7 @@
 				<img class="img-responsive" :src="item.Poster">
 				<h3 class="panel-title">{{item.Title}}</h3>
 				<span>{{item.Year}} - {{ item.Type }}</span><br>
-				<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
+				<a :href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
 			</div>
 			<!-- /FICHE FILM -->
 			<!-- / RESULTATS RECHERCHE -->
