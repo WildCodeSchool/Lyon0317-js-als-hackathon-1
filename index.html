@@ -43,25 +43,26 @@
 
 					<div class="form-group">
 						<p>Genre</p>
-						<input type="radio" name="name" id="film" value="film" class="film">
-						<label for="film">Films</label>
+						<input type="radio" name="radio-type" id="film" value="movie">
+						<label for="film">Movies</label>
 
-						<input type="radio" name="name" id="serie" value="serie" class="serie">
+						<input type="radio" name="radio-type" id="serie" value="series">
 						<label for="serie">Series</label>
 
 
-						<input type="radio" name="name" id="episode" value="episode" class="episode">
-						<label for="episode">Épisodes</label>
+						<input type="radio" name="radio-type" id="episode" value="episode">
+						<label for="episode">Episodes</label>
 
-						<input type="text" name="otherGenre" style="display:none" class="form-control" id="otherGenre">
+						<input type="radio" name="radio-type" id="all" value="default">
+						<label for="all">All</label>
+
 					</div>
 
 					<div class="form-group">
 						<label for="region">Année du Film :</label><br />
-						<select class="form-control" id="annee-formulaire" name="annee-formulaire">
-                                <option value="default" selected>Choisissez une année</option>
-                     
-                            		</select>
+						<select class="form-control" id="year-form" name="year-form">
+								<option value="default" selected>Choisissez une année</option>
+						</select>
 					</div>
 
 					<button type="button" v-on:click="search();showResults()" class="btn btn-primary">Rechercher</button>
@@ -70,11 +71,13 @@
 			</div>
 			<!-- RESULTATS RECHERCHE -->
 			<!-- FICHE FILM -->
-			<div class="col-md-3 col-sm-4 movie-sheet" v-for="item in movieItem">
-				<img class="img-responsive" :src="item.Poster">
-				<h3 class="panel-title">{{item.Title}}</h3>
-				<span>{{item.Year}} - {{ item.Type }}</span><br>
-				<a id="imdbLink" href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
+			<div class="flush">
+				<div class="col-md-3 col-sm-4 movie-sheet" v-for="item in movieItem">
+					<img class="img-responsive" :src="item.Poster">
+					<h3 class="panel-title">{{item.Title}}</h3>
+					<span>{{item.Year}} - {{ item.Type }}</span><br>
+					<a id="imdbLink" href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
+				</div>
 			</div>
 			<!-- /FICHE FILM -->
 			<!-- / RESULTATS RECHERCHE -->

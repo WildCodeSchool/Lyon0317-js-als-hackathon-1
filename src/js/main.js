@@ -6,10 +6,18 @@ $(document).ready(function () {
 			movieItem: []
 		},
 		methods: {
-			search: function (queryTitle) {
-
+			search: function () {
+				$('.flush').empty();
 				let keyword = $('#keyword').val();
-				urlOmdbApi = `http://www.omdbapi.com/?s=${keyword}`;
+				let type = $('input[name]:checked').val();
+				let year = $('#year-form').val();
+				if (type === undefined) {
+					urlOmdbApi = `http://www.omdbapi.com/?s=${keyword}&y=${year}`;
+				} else {
+					urlOmdbApi = `http://www.omdbapi.com/?s=${keyword}&type=${type}&y=${year}`;
+				}
+				console.log(type);
+
 			},
 
 			showResults: function () {
