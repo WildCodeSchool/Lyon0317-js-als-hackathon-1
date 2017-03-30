@@ -1,18 +1,43 @@
 $(document).ready(function () {
+	let urlOmdbApi = '';
+	let app = new Vue({
+		el: '#app',
+		data: {
+			movieItem: []
+		},
+		methods: {
+			search: function (queryTitle) {
+				let keyword = $('#keyword').val();
+				urlOmdbApi = `http://www.omdbapi.com/?s=${keyword}`;
+			},
 
-	console.log('je suis méga ready');
+			showResults: function () {
+				sURL = urlOmdbApi;
+				$.getJSON(sURL).done(function (response) {
+					console.log(sURL)
+					for (let item in response.Search) {
+						app.movieItem.push(response.Search[item]);
+					}
+					sURL = '';
 
-
-	let urlOmdbApi = 'http://www.omdbapi.com/?s=unicorn';
-
-	$.getJSON(urlOmdbApi).done(function (response) {
-		console.log(response);
-
-		for (let item in response.Search) {
-			console.log(response.Search[item]);
+				});
+			}
 		}
-
-
 	});
 
+	// console.log('je suis méga ready');
+
 });
+
+
+
+// ready: function () {
+// 	let self = this;
+// 	$.ajax({
+// 		url: omdbApi,
+// 		method: 'GET',
+// 		success: function (data) {
+// 			self.movieItem = data;
+// 		}
+// 	})
+// }

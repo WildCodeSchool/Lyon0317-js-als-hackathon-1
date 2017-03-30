@@ -25,88 +25,66 @@
 
 
 
+	<div id="app">
+		<div class="container">
 
-	<div class="container">
-
-		<h2>Panaché Films</h2>
-
-
-		<div class="formulaire">
-			<form action="" method="POST" role="form">
-				<h3>Recherche un film </h3>
+			<h2>Panaché Films</h2>
 
 
-				<div class="form-group">
-					<label for="mot-cles">Mot clés</label>
-					<input required type="text" class="form-control" id="mot-cles" placeholder="mot-cles">
-				</div>
-
-				<div class="form-group">
-					<p>Genre</p>
-					<input type="radio" name="name" id="film" value="film" class="film">
-					<label for="film">Films</label>
-
-					<input type="radio" name="name" id="serie" value="serie" class="serie">
-					<label for="serie">Series</label>
+			<div class="formulaire">
+				<form action="" method="POST" role="form">
+					<h3>Recherche un film </h3>
 
 
-					<input type="radio" name="name" id="episode" value="episode" class="episode">
-					<label for="episode">Épisodes</label>
+					<div class="form-group">
+						<label for="keyword">Mot clés</label>
+						<input required type="text" class="form-control" id="keyword" placeholder="mot-cles">
+					</div>
 
-					<input type="text" name="otherGenre" style="display:none" class="form-control" id="otherGenre">
-				</div>
+					<div class="form-group">
+						<p>Genre</p>
+						<input type="radio" name="name" id="film" value="film" class="film">
+						<label for="film">Films</label>
 
-				<div class="form-group">
-					<label for="region">Année du Film :</label><br />
-					<select class="form-control" id="annee-formulaire" name="annee-formulaire">
+						<input type="radio" name="name" id="serie" value="serie" class="serie">
+						<label for="serie">Series</label>
+
+
+						<input type="radio" name="name" id="episode" value="episode" class="episode">
+						<label for="episode">Épisodes</label>
+
+						<input type="text" name="otherGenre" style="display:none" class="form-control" id="otherGenre">
+					</div>
+
+					<div class="form-group">
+						<label for="region">Année du Film :</label><br />
+						<select class="form-control" id="annee-formulaire" name="annee-formulaire">
                                 <option value="default" selected>Choisissez une année</option>
                      
                             		</select>
-				</div>
+					</div>
 
-				<button type="submit" class="btn btn-primary">Rechercher</button>
+					<button type="button" v-on:click="search();showResults()" class="btn btn-primary">Rechercher</button>
 
-			</form>
+				</form>
+			</div>
+			<!-- RESULTATS RECHERCHE -->
+			<!-- FICHE FILM -->
+			<div class="col-md-3 col-sm-4 movie-sheet" v-for="item in movieItem">
+				<img class="img-responsive" :src="item.Poster">
+				<h3 class="panel-title">{{item.Title}}</h3>
+				<span>{{item.Year}} - {{ item.Type }}</span><br>
+				<a :href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
+			</div>
+			<!-- /FICHE FILM -->
+			<!-- / RESULTATS RECHERCHE -->
 		</div>
-		<!-- RESULTATS RECHERCHE -->
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-		<!-- FICHE FILM -->
-		<div class="col-md-3 col-sm-4 movie-sheet">
-			<img class="img-responsive" src="img/movie-poster-example.jpg">
-			<h3 class="panel-title">The Last Unicorn</h3>
-			<span>1982 - Movie</span><br>
-			<a href="http://www.imdb.com/title/tt0084237/">IMDb ID : tt0084237</a>
-		</div>
-		<!-- /FICHE FILM -->
-		<!-- / RESULTATS RECHERCHE -->
 	</div>
 
 
 
 	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="https://unpkg.com/vue@2.2.6 "></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="src/js/main.js"></script>
 	<script src="src/js/formulaire.js"></script>
