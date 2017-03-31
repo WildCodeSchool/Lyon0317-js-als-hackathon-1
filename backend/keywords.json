@@ -309,6 +309,26 @@
       "searchedKeyword": "bla",
       "queryURL": "http://www.omdbapi.com/?s=bla&y=default",
       "id": 62
+    },
+    {
+      "searchedKeyword": "caca",
+      "queryURL": "http://www.omdbapi.com/?s=caca&y=default",
+      "id": 63
+    },
+    {
+      "searchedKeyword": "test",
+      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
+      "id": 64
+    },
+    {
+      "searchedKeyword": "test",
+      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
+      "id": 65
+    },
+    {
+      "searchedKeyword": "CACA ",
+      "queryURL": "http://www.omdbapi.com/?s=CACA &y=default",
+      "id": 66
     }
   ]
 }
