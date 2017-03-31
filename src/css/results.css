@@ -1,10 +1,24 @@
-.movie-sheet {
+/*.movie-sheet {
 	text-align: center;
 	-moz-box-shadow: -5px 5px 5px 0px #656565;
 	-webkit-box-shadow: -5px 5px 5px 0px #656565;
 	-o-box-shadow: -5px 5px 5px 0px #656565;
 	box-shadow: -5px 5px 5px 0px #656565;
 	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=224, Strength=5);
+}*/
+.last-keywords {
+	display: inline-block;
+}
+
+.movie-sheet {
+	height: 370px;
+	margin: 15px 0;
+	padding: 0 30px 0 0;
+}
+
+.movie-sheet-inner{
+	background-color: #9199a5;
+	height: 100%;
 }
 
 .movie-sheet img {
@@ -13,4 +27,15 @@
 
 .movie-sheet h3 {
 	font-size:24px;
+}
+
+.movie-poster {
+	height: 100%;
+	padding: 0;
+}
+
+.movie-poster-bkg {
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
 }

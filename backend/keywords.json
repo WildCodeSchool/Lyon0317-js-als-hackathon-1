@@ -1,3 +1,19 @@
 {
-  "savedSearch": []
+  "savedSearch": [
+    {
+      "searchedKeyword": "gfdgf",
+      "queryURL": "http://www.omdbapi.com/?s=gfdgf&y=default",
+      "id": 1
+    },
+    {
+      "searchedKeyword": "cake",
+      "queryURL": "http://www.omdbapi.com/?s=cake&y=default",
+      "id": 2
+    },
+    {
+      "searchedKeyword": "chocol",
+      "queryURL": "http://www.omdbapi.com/?s=chocol&y=default",
+      "id": 3
+    }
+  ]
 }
