@@ -37,44 +37,52 @@
 
 
 					<div class="form-group">
-						<label for="keyword">Mot clés</label>
-						<input required type="text" class="form-control" id="keyword" placeholder="mot-cles">
+						<label for="input-keyword">Mot clés</label>
+						<input required type="text" class="form-control" id="input-keyword" placeholder="mot-cles" v-on:keydown="search();showResults()">
 					</div>
 
 					<div class="form-group">
 						<p>Genre</p>
-						<input type="radio" name="name" id="film" value="film" class="film">
-						<label for="film">Films</label>
+						<input type="radio" name="radio-type" id="film" value="movie" v-on:click="search();showResults()">
+						<label for="film">Movies</label>
 
-						<input type="radio" name="name" id="serie" value="serie" class="serie">
+						<input type="radio" name="radio-type" id="serie" value="series" v-on:click="search();showResults()">
 						<label for="serie">Series</label>
 
 
-						<input type="radio" name="name" id="episode" value="episode" class="episode">
-						<label for="episode">Épisodes</label>
+						<input type="radio" name="radio-type" id="episode" value="episode" v-on:click="search();showResults()">
+						<label for="episode">Episodes</label>
 
-						<input type="text" name="otherGenre" style="display:none" class="form-control" id="otherGenre">
+						<input type="radio" name="radio-type" id="all" value="default">
+						<label for="all">All</label>
+
 					</div>
 
 					<div class="form-group">
 						<label for="region">Année du Film :</label><br />
-						<select class="form-control" id="annee-formulaire" name="annee-formulaire">
-                                <option value="default" selected>Choisissez une année</option>
-                     
-                            		</select>
+						<select class="form-control" id="year-form" name="year-form">
+								<option value="default" selected>Choisissez une année</option>
+						</select>
 					</div>
 
-					<button type="button" v-on:click="search();showResults()" class="btn btn-primary">Rechercher</button>
+					<button type="button" v-on:click="search();showResults();saveKeywords();showLastResults()" class="btn btn-primary">Rechercher</button>
 
 				</form>
+				<div class="last-keywords">
+					<ul>
+						<li v-for="item of lastKeywordItem"><a v-on:click="showResults('item.queryURL')" href="">{{item.searchedKeyword}} - {{item.queryURL}}</a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- RESULTATS RECHERCHE -->
 			<!-- FICHE FILM -->
-			<div class="col-md-3 col-sm-4 movie-sheet" v-for="item in movieItem">
-				<img class="img-responsive" :src="item.Poster">
-				<h3 class="panel-title">{{item.Title}}</h3>
-				<span>{{item.Year}} - {{ item.Type }}</span><br>
-				<a id="imdbLink" href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
+			<div class="flush">
+				<div class="col-md-3 col-sm-4 movie-sheet" v-for="item in movieItem">
+					<img class="img-responsive" :src="item.Poster">
+					<h3 class="panel-title">{{item.Title}}</h3>
+					<span>{{item.Year}} - {{ item.Type }}</span><br>
+					<a id="imdbLink" href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
+				</div>
 			</div>
 			<!-- /FICHE FILM -->
 			<!-- / RESULTATS RECHERCHE -->

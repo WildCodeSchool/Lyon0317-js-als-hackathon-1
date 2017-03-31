@@ -1,8 +1,8 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
-for(let i = 1950; i < 2017 ; i += 1){
-	$('#annee-formulaire').append(`  <option value=${i}>${i}</option>`)
-}
+	for (let i = 1950; i < 2017; i += 1) {
+		$('#year-form').append(`  <option value=${i} v-on:selected="search();showResults()">${i}</option>`)
+	}
 
 
 
