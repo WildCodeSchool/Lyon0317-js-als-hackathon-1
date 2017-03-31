@@ -65,9 +65,14 @@
 						</select>
 					</div>
 
-					<button type="button" v-on:click="search();showResults();saveKeywords()" class="btn btn-primary">Rechercher</button>
+					<button type="button" v-on:click="search();showResults();saveKeywords();showLastResults()" class="btn btn-primary">Rechercher</button>
 
 				</form>
+				<div class="last-keywords">
+					<ul>
+						<li v-for="item of lastKeywordItem"><a v-on:click="showResults('item.queryURL')" href="">{{item.searchedKeyword}} - {{item.queryURL}}</a></li>
+					</ul>
+				</div>
 			</div>
 			<!-- RESULTATS RECHERCHE -->
 			<!-- FICHE FILM -->

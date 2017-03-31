@@ -3,7 +3,8 @@ $(document).ready(function () {
 	let app = new Vue({
 		el: '#app',
 		data: {
-			movieItem: []
+			movieItem: [],
+			lastKeywordItem: []
 		},
 		methods: {
 			search: function () {
@@ -19,27 +20,39 @@ $(document).ready(function () {
 
 			},
 
-			showResults: function () {
+			showResults: function (sURL) {
 				sURL = urlOmdbApi;
 				$.getJSON(sURL).done(function (response) {
-					console.log(sURL)
 					for (let item in response.Search) {
 						app.movieItem.push(response.Search[item]);
 					}
-					sURL = '';
+					// sURL = '';
+					console.log(sURL);
 
+				});
+
+			},
+			showLastResults: function () {
+				let saveKeywordURL = 'http://localhost:3000/savedSearch';
+				$.getJSON(saveKeywordURL).done(function (keywordsJSON) {
+					for (let item in keywordsJSON) {
+						app.lastKeywordItem.push(keywordsJSON[item]);
+					}
 				});
 			},
 
 			saveKeywords: function () {
 				let savedKeyword = $('#input-keyword').val();
 				let url = 'http://localhost:3000/savedSearch'
-				console.log(savedKeyword);
-
 				$.post(url, { searchedKeyword: savedKeyword, queryURL: urlOmdbApi }).done(function () {
-					alert('Nouvelle citation ajoutée!');
 				});
+			},
+
+			changeSearchKeyword: function () {
+				sURL = 'http://www.omdbapi.com/?s=whisky&y=default';
+				showResults();
 			}
+
 		}
 	});
 
