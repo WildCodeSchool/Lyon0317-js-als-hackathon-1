@@ -1,314 +1,39 @@
 {
   "savedSearch": [
     {
-      "searchedKeyword": "whisky",
-      "queryURL": "http://www.omdbapi.com/?s=whisky&y=default",
+      "searchedKeyword": "why ",
+      "queryURL": "http://www.omdbapi.com/?s=why &y=default",
       "id": 1
     },
     {
-      "searchedKeyword": "vodka",
-      "queryURL": "http://www.omdbapi.com/?s=vodka&y=default",
+      "searchedKeyword": "why",
+      "queryURL": "http://www.omdbapi.com/?s=why&y=default",
       "id": 2
     },
     {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
+      "searchedKeyword": "car",
+      "queryURL": "http://www.omdbapi.com/?s=car&y=default",
       "id": 3
     },
     {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
+      "searchedKeyword": "car",
+      "queryURL": "http://www.omdbapi.com/?s=car&y=default",
       "id": 4
     },
     {
-      "searchedKeyword": "jeann",
-      "queryURL": "http://www.omdbapi.com/?s=jeann&y=default",
+      "searchedKeyword": "car",
+      "queryURL": "http://www.omdbapi.com/?s=car&y=default",
       "id": 5
     },
     {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
+      "searchedKeyword": "car ",
+      "queryURL": "http://www.omdbapi.com/?s=car &y=default",
       "id": 6
     },
     {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
+      "searchedKeyword": "car",
+      "queryURL": "http://www.omdbapi.com/?s=car&y=default",
       "id": 7
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 8
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 9
-    },
-    {
-      "searchedKeyword": "Caca",
-      "queryURL": "http://www.omdbapi.com/?s=Caca&y=default",
-      "id": 10
-    },
-    {
-      "searchedKeyword": "CACA ",
-      "queryURL": "http://www.omdbapi.com/?s=CACA &y=default",
-      "id": 11
-    },
-    {
-      "searchedKeyword": "CACA ",
-      "queryURL": "http://www.omdbapi.com/?s=CACA &y=default",
-      "id": 12
-    },
-    {
-      "searchedKeyword": "CACA ",
-      "queryURL": "http://www.omdbapi.com/?s=CACA &y=default",
-      "id": 13
-    },
-    {
-      "searchedKeyword": "merde ",
-      "queryURL": "http://www.omdbapi.com/?s=merde &y=default",
-      "id": 14
-    },
-    {
-      "searchedKeyword": "merde ",
-      "queryURL": "http://www.omdbapi.com/?s=merde &y=default",
-      "id": 15
-    },
-    {
-      "searchedKeyword": "MEEEEERDE",
-      "queryURL": "http://www.omdbapi.com/?s=MEEEEERDE&y=default",
-      "id": 16
-    },
-    {
-      "searchedKeyword": "Salope ",
-      "queryURL": "http://www.omdbapi.com/?s=Salope &y=default",
-      "id": 17
-    },
-    {
-      "searchedKeyword": "Salope ",
-      "queryURL": "http://www.omdbapi.com/?s=Salope &y=default",
-      "id": 18
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 19
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 20
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 21
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 22
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 23
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 24
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 25
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 26
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 27
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 28
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 29
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 30
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 31
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 32
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 33
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 34
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 35
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 36
-    },
-    {
-      "searchedKeyword": "couco",
-      "queryURL": "http://www.omdbapi.com/?s=couco&y=default",
-      "id": 37
-    },
-    {
-      "searchedKeyword": "cvvc",
-      "queryURL": "http://www.omdbapi.com/?s=cvvc&y=default",
-      "id": 38
-    },
-    {
-      "searchedKeyword": "xw<x",
-      "queryURL": "http://www.omdbapi.com/?s=xw<x&y=default",
-      "id": 39
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 40
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 41
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 42
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 43
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 44
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 45
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 46
-    },
-    {
-      "searchedKeyword": "arthur ",
-      "queryURL": "http://www.omdbapi.com/?s=arthur &y=default",
-      "id": 47
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 48
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 49
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 50
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 51
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 52
-    },
-    {
-      "searchedKeyword": "tes",
-      "queryURL": "http://www.omdbapi.com/?s=tes&y=default",
-      "id": 53
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 54
-    },
-    {
-      "searchedKeyword": "tes",
-      "queryURL": "http://www.omdbapi.com/?s=tes&y=default",
-      "id": 55
-    },
-    {
-      "searchedKeyword": "cxcxw",
-      "queryURL": "http://www.omdbapi.com/?s=cxcxw&y=default",
-      "id": 56
-    },
-    {
-      "searchedKeyword": "nbvb",
-      "queryURL": "http://www.omdbapi.com/?s=nbvb&y=default",
-      "id": 57
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 58
-    },
-    {
-      "searchedKeyword": "",
-      "queryURL": "http://www.omdbapi.com/?s=&y=default",
-      "id": 59
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 60
-    },
-    {
-      "searchedKeyword": "test",
-      "queryURL": "http://www.omdbapi.com/?s=test&y=default",
-      "id": 61
-    },
-    {
-      "searchedKeyword": "bla",
-      "queryURL": "http://www.omdbapi.com/?s=bla&y=default",
-      "id": 62
     }
   ]
 }
