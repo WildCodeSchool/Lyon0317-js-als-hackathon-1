@@ -20,14 +20,14 @@ $(document).ready(function () {
 
 			},
 
-			showResults: function (sURL) {
+			showResults: function () {
 				sURL = urlOmdbApi;
 				$.getJSON(sURL).done(function (response) {
 					for (let item in response.Search) {
 						app.movieItem.push(response.Search[item]);
 					}
-					// sURL = '';
-					console.log(sURL);
+					sURL = '';
+					// console.log(sURL);
 
 				});
 
@@ -48,9 +48,18 @@ $(document).ready(function () {
 				});
 			},
 
-			changeSearchKeyword: function () {
-				sURL = 'http://www.omdbapi.com/?s=whisky&y=default';
-				showResults();
+
+			newResults: function (url) {
+				console.log(url);
+				$('.flush').empty();
+				$.getJSON(url).done(function (retour) {
+					for (let item in retour.Search) {
+						app.movieItem.push(retour.Search[item]);
+					}
+					// sURL = '';
+					// console.log(sURL);
+
+				});
 			}
 
 		}
