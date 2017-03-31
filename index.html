@@ -76,9 +76,10 @@
 			</div>
 			<!-- RESULTATS RECHERCHE -->
 			<!-- FICHE FILM -->
-			<div class="flush">
-				<div class="col-md-3 col-sm-4 movie-sheet" v-for="item in movieItem">
-					<img class="img-responsive" :src="item.Poster">
+			<div class="flush grid">
+				<div class="movie-sheet grid-item" v-for="item in movieItem">
+					<img v-if="item.Poster != 'N/A'" class="img-responsive" :src="item.Poster">
+					<img v-if="item.Poster === 'N/A'" class="img-responsive" src="http://placehold.it/300x400">
 					<h3 class="panel-title">{{item.Title}}</h3>
 					<span>{{item.Year}} - {{ item.Type }}</span><br>
 					<a id="imdbLink" href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
@@ -92,6 +93,8 @@
 
 
 	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="src/js/masonry.pkgd.min.js"></script>
+	<script src="src/js/template.js"></script>
 	<script src="https://unpkg.com/vue@2.2.6 "></script>
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="src/js/main.js"></script>
