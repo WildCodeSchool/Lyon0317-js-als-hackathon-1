@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Latest compiled and minified CSS & JS -->
-	<link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="src/css/bootstrap.css">
 	<link rel="stylesheet" href="src/css/stylesheet.css">
 	<link rel="stylesheet" href="src/css/results.css">
 	<link rel="stylesheet" href="src/css/formulaire.css">
@@ -16,24 +17,15 @@
 
 <body>
 
-
-
-
-
-
-
-
-
-
 	<div id="app">
 		<div class="container">
 
-			<h2>Panaché Films</h2>
+			<h2>WCS Movies Database</h2>
 
 
-			<div class="formulaire">
+			<div class="formulaire panel panel-default">
 				<form action="" method="POST" role="form">
-					<h3>Recherche un film </h3>
+					<h3>Search a movie</h3>
 
 
 					<div class="form-group">
@@ -42,7 +34,7 @@
 					</div>
 
 					<div class="form-group">
-						<p>Genre</p>
+						<p>Type</p>
 						<input type="radio" name="radio-type" id="film" value="movie" v-on:click="search();showResults()">
 						<label for="film">Movies</label>
 
@@ -50,8 +42,8 @@
 						<label for="serie">Series</label>
 
 
-						<input type="radio" name="radio-type" id="episode" value="episode" v-on:click="search();showResults()">
-						<label for="episode">Episodes</label>
+						<!--<input type="radio" name="radio-type" id="episode" value="episode" v-on:click="search();showResults()">
+						<label for="episode">Episodes</label>-->
 
 						<input type="radio" name="radio-type" id="all" value="default">
 						<label for="all">All</label>
@@ -59,7 +51,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="region">Année du Film :</label><br />
+						<label for="region">Release year</label><br />
 						<select class="form-control" id="year-form" name="year-form">
 								<option value="default" selected>Choisissez une année</option>
 						</select>
@@ -68,21 +60,24 @@
 					<button type="button" v-on:click="search();showResults();saveKeywords();showLastResults()" class="btn btn-primary">Rechercher</button>
 
 				</form>
-				<div class="last-keywords">
-					<ul>
-						<li v-for="item of lastKeywordItem"><a v-on:click="newResults(item.queryURL)">{{item.searchedKeyword}} - {{item.queryURL}}</a></li>
-					</ul>
+				<div class="last-keywords col-md-12">
+					<a v-for="item of lastKeywordItem" class="label label-default" v-on:click="newResults(item.queryURL)">{{item.searchedKeyword}}</a>
 				</div>
 			</div>
 			<!-- RESULTATS RECHERCHE -->
 			<!-- FICHE FILM -->
-			<div class="flush grid">
-				<div class="movie-sheet grid-item" v-for="item in movieItem">
-					<img v-if="item.Poster != 'N/A'" class="img-responsive" :src="item.Poster">
-					<img v-if="item.Poster === 'N/A'" class="img-responsive" src="http://placehold.it/300x400">
-					<h3 class="panel-title">{{item.Title}}</h3>
-					<span>{{item.Year}} - {{ item.Type }}</span><br>
-					<a id="imdbLink" href="http://www.imdb.com/title/">IMDb ID : {{item.imdbID}}</a>
+			<div class="flush">
+				<div class="movie-sheet col-md-6" v-for="item in movieItem">
+					<div class="movie-sheet-inner">
+						<div class="movie-poster col-md-5">
+							<div class="movie-poster-bkg" v-bind:style="{ backgroundImage: 'url(' + item.Poster + ')' }"></div>
+							<!--<img v-if="item.Poster != 'N/A'" class="img-responsive" :src="item.Poster">
+							<img v-if="item.Poster === 'N/A'" class="img-responsive" src="http://placehold.it/300x400">-->
+						</div>
+						<h3 class="panel-title">{{item.Title}}</h3>
+						<span>{{item.Year}} - {{ item.Type }}</span><br>
+						<span id="imdbLink">IMDb ID : {{item.imdbID}}</span>
+					</div>
 				</div>
 			</div>
 			<!-- /FICHE FILM -->
